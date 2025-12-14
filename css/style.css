@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+ul,ol{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+html,
+body{
+    font-family: arial;
+}
+.container{
+    width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+nav{
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+nav button{
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+
+.sidebar{
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.35);
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ;
+
+}
+.sidebar.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.sidebarcnt{
+    max-width: 350px;
+    background-color: #fff;
+    height: 100%;
+    padding: 20px;
+    position: relative;
+    transform: translateX(-100%);
+    transition: all 0.3s ;
+
+}
+
+.sidebar.show .sidebarcnt{
+    transform: translateX(0%);
+}
+
+.sidebarcnt button{
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    position: absolute;
+    cursor: pointer;
+    right: 15px;
+    top: 0px;
+    padding: 5px;
+}
+
+
+
+.cursor{
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    z-index: 1000;  
+    pointer-events: none; 
+}
+.cursorsm{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    z-index: 1000;   
+    transition: 0.1s;
+    pointer-events: none;
+}
